@@ -106,6 +106,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // Quick WhatsApp booking button (floating + header, if data attribute present)
   document.querySelectorAll('[data-whatsapp-quick]').forEach(function (btn) {
     btn.addEventListener('click', function (e) {
+      e.preventDefault();
       var text = encodeURIComponent('Hi Nkwadi, I would like to book your services for an upcoming event.');
       var url = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + text;
       window.open(url, '_blank', 'noopener');
